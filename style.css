@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.snow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.snow div{
+    position: fixed;
+    top: -40px;
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: drop 10s linear infinite;
+}
+
+.snow > div:nth-of-type(odd){
+    width: 5px;
+    height: 5px;
+    animation-duration: 7s;
+}
+
+.snow > div:nth-of-type(1){
+    left: 5%;
+    animation-delay: 1s;
+}
+
+.snow > div:nth-of-type(2){
+    left: 10%;
+    animation-delay: 8s;
+}
+
+.snow > div:nth-of-type(3){
+    left: 15%;
+    animation-delay: 20s;
+}
+
+.snow > div:nth-of-type(4){
+    left: 25%;
+    animation-delay: 10s;
+}
+
+.snow > div:nth-of-type(5){
+    left: 35%;
+    animation-delay: 8s;
+}
+
+.snow > div:nth-of-type(6){
+    left: 45%;
+    animation-delay: 8;
+}
+
+.snow > div:nth-of-type(7){
+    left: 50%;
+    animation-delay: 3s;
+}
+
+.snow > div:nth-of-type(8){
+    left: 60%;
+    animation-delay: 4s;
+}
+
+.snow > div:nth-of-type(9){
+    left: 65%;
+    animation-delay: 6s;
+}
+
+.snow > div:nth-of-type(10){
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.snow > div:nth-of-type(11){
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.snow > div:nth-of-type(12){
+    left: 80%;
+    animation-delay: 6s;
+}
+
+.snow > div:nth-of-type(13){
+    left: 85%;
+    animation-delay: 2s;
+}
+
+.snow > div:nth-of-type(14){
+    left: 90%;
+    animation-delay: 9s;
+}
+
+.snow > div:nth-of-type(15){
+    left: 95%;
+    animation-delay: 3s;
+}
+
+.snow > div:nth-of-type(16){
+    left: 100%;
+    animation-delay: 13s;
+}
+
+.snow > div:nth-of-type(17){
+    left: 83%;
+    animation-delay: 1s;
+}
+
+.snow > div:nth-of-type(18){
+    left: 43%;
+    animation-delay: 6s;
+}
+
+.snow > div:nth-of-type(19){
+    left: 33%;
+    animation-delay: 2s;
+}
+
+.snow > div:nth-of-type(20){
+    left: 13%;
+    animation-delay: 7s;
+}
+
+@keyframes drop {
+    from{
+        top:-40px;
+    }
+    to{
+        top:2000px;
+    }
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    max-height: 1400px;
+    background: linear-gradient(180deg, #FE0000 61.46%, #CD0000 95.73%);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.containerImg{
+    width: 40%;
+}
+
+.containerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerContent{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.form{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 10px;
+    column-gap: 20px;
+    padding: 4rem 0;
+    height: 100%;
+    max-height: 1000px;
+}
+
+.inputWhite{
+    height: 75%;
+    max-height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#titleForm{
+    grid-column: 1/5;
+    text-align: center;
+    font-family: 'Alice', serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 20px 0;
+    text-shadow: 0px 12px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#name{
+    grid-column: 1/3;
+}
+
+#lastName{
+    grid-column: 3/5;
+}
+
+#email{
+    grid-column: 1/5;
+}
+
+#password{
+    grid-column: 1/3;
+}
+
+#tel{
+    grid-column: 3/5;
+}
+
+#enter{
+    grid-column: 2/4;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #79d84c;
+    border-radius: 1rem;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#enter:hover{
+    background-color: #b2f793;
+}
+
+@media screen and (max-width:750px) {
+    .main{
+        flex-direction: column;
+        max-height: none;
+        justify-content: center;
+        height: auto;
+        background: linear-gradient(180deg, #FE0000 36.46%, #CD0000 100%);
+    }
+
+    .containerContent{
+        width: 100%;
+    }
+
+    .containerImg{
+        width: 100%;
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+        max-height: none;
+    }
+
+    .inputWhite{
+        height: 40px;
+    }
+
+    #name{
+        grid-column: 1/5;
+    }
+    
+    #lastName{
+        grid-column: 1/5;
+    }
+    
+    #email{
+        grid-column: 1/5;
+    }
+    
+    #password{
+        grid-column: 1/5;
+    }
+    
+    #tel{
+        grid-column: 1/5;
+    }
+    
+}
